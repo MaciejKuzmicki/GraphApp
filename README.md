@@ -7,7 +7,7 @@ To generate graph we should mark options that we are interested in and specify n
 Generated graph we can save to the file and also we can load the graph from file.  
 To check if graph is connected we can use:  
 a) BFS algorithm - it is recommended when every path from one vertex to adjacent vertex is in both ways  
-b) DFS algorithm - it is recommended in every other cases, but time complexity allows us to check if graph is connected when it has up to 1000 vertexes as mentioned above  
+b) DFS algorithm - it is recommended in every other cases, but time complexity allows us to check if graph is connected when it has up to 1000 vertexes as mentioned above.    
 We can also find the shortest path between two vertexes using Dijkstra algorithm and we can do that in two ways:  
 a) type start and end vertex in the adequate field and press the button  
 b) select two vertexes on the user interface by clicking on the middle of the each vertex  
