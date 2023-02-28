@@ -1,5 +1,5 @@
 # GraphApp
-This program allows the user to do different operations with graphs, which looks like "squared paper", are directed and weighted. We can generate graphs in three ways:
+This program allows the user to do different operations with graphs, which looks like "squared paper", are directed and weighted. We can generate graphs in three ways:  
 a) graph that contains all edges between adjacent vertexes
 b) graph that is connected (this type of generation uses DFS algorithm which is made to check connections for each vertex, due to the time complexity we can generate only graph that contains up to 1000 vertexes)
 c) graph with randomly generated edges
