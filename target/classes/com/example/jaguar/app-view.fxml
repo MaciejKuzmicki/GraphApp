@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="801.0" maxWidth="1200.0" minHeight="800.0" minWidth="1200.0" prefHeight="801.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jaguar.Controller">
+   <children>
+      <Separator layoutX="933.0" orientation="VERTICAL" prefHeight="800.0" prefWidth="0.0" />
+      <Pane layoutX="936.0" prefHeight="96.0" prefWidth="261.0">
+         <children>
+            <Label layoutX="7.0" layoutY="21.0" prefHeight="17.0" prefWidth="147.0" text="Enter the number of rows:" />
+            <TextField fx:id="NumberOfRows" layoutX="175.0" layoutY="17.0" prefHeight="25.0" prefWidth="66.0" />
+            <TextField fx:id="NumberOfColumns" layoutX="175.0" layoutY="51.0" prefHeight="25.0" prefWidth="66.0" />
+            <Label layoutX="7.0" layoutY="55.0" prefHeight="17.0" prefWidth="167.0" text="Enter the number of columns:" />
+         </children>
+      </Pane>
+      <Separator layoutX="1.0" layoutY="611.0" prefHeight="5.0" prefWidth="1200.0" />
+      <Label layoutX="8.0" layoutY="614.0" prefHeight="25.0" prefWidth="112.0" text="Messages and errors:" />
+      <Separator layoutX="1.0" layoutY="637.0" prefHeight="5.0" prefWidth="934.0" />
+      <ScrollPane layoutY="639.0" prefHeight="160.0" prefWidth="938.0">
+         <content>
+            <Text fx:id="MessagesAndErrorsText" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="932.13671875" />
+         </content></ScrollPane>
+      <Pane layoutX="936.0" layoutY="183.0" prefHeight="70.0" prefWidth="261.0">
+         <children>
+            <Label layoutX="7.0" layoutY="10.0" prefHeight="17.0" prefWidth="94.0" text="All connections:" />
+            <Label layoutX="7.0" layoutY="40.0" text="Must be connected:" />
+            <CheckBox fx:id="AllConnections" layoutX="144.0" layoutY="10.0" mnemonicParsing="false" onAction="#changeAllConnectionStatus" prefWidth="23.0" />
+            <CheckBox fx:id="MustBeConnected" layoutX="144.0" layoutY="40.0" mnemonicParsing="false" onAction="#changeConnectedStatus" prefWidth="23.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="936.0" layoutY="96.0" prefHeight="87.0" prefWidth="261.0">
+         <children>
+            <Label layoutX="8.0" layoutY="14.0" text="Enter the minimum weight:" />
+            <Label layoutX="8.0" layoutY="51.0" text="Enter the maximum weight:" />
+            <TextField fx:id="MinimumWeight" layoutX="176.0" layoutY="10.0" prefHeight="25.0" prefWidth="66.0" />
+            <TextField fx:id="MaximumWeight" layoutX="176.0" layoutY="47.0" prefHeight="25.0" prefWidth="66.0" />
+         </children>
+      </Pane>
+      <Button fx:id="GenerateButton" layoutX="1034.0" layoutY="275.0" mnemonicParsing="false" onAction="#graphGenerate" text="Generate" />
+      <Separator orientation="VERTICAL" prefHeight="200.0" />
+      <Separator layoutX="750.0" orientation="VERTICAL" prefHeight="613.0" prefWidth="6.0" />
+      <Separator layoutX="934.0" layoutY="321.0" prefHeight="5.0" prefWidth="268.0" />
+      <Button fx:id="DeleteMessagesAndErrors" layoutX="760.5" layoutY="613.4" mnemonicParsing="false" onAction="#deleteMessagesAndErrorsText" text="Delete messages and errors" />
+      <Button fx:id="LoadGraphFromFileButton" layoutX="1004.0" layoutY="350.0" mnemonicParsing="false" onAction="#loadGraphFromFile" text="Load graph from file" />
+      <Separator layoutX="934.0" layoutY="398.0" prefHeight="5.0" prefWidth="268.0" />
+      <Button fx:id="SaveGraphToFileButton" layoutX="1012.0" layoutY="422.0" mnemonicParsing="false" onAction="#saveGraphToFile" text="Save graph to file" />
+      <Separator layoutX="934.0" layoutY="462.0" prefHeight="5.0" prefWidth="268.0" />
+      <ScrollPane fx:id="graphScrollPane" fitToHeight="true" fitToWidth="true" pickOnBounds="false" prefHeight="613.0" prefWidth="754.0" style="-fx-background-color: #000000;">
+         <content>
+            <Canvas fx:id="graphDrawing" height="611.0" onMouseClicked="#chooseVertexes" style="-fx-background: #999999; -fx-border-color: #000000;" width="751.0" />
+         </content>
+      </ScrollPane>
+      <Label layoutX="947.0" layoutY="482.0" text="Enter the start vertex:" />
+      <Label layoutX="947.0" layoutY="513.0" text="Enter the end vertex:" />
+      <TextField fx:id="StartVertex" layoutX="1098.0" layoutY="478.0" prefHeight="25.0" prefWidth="66.0" />
+      <TextField fx:id="EndVertex" layoutX="1098.0" layoutY="510.0" prefHeight="25.0" prefWidth="66.0" />
+      <Button fx:id="DijkstraButton" layoutX="1002.0" layoutY="554.0" mnemonicParsing="false" onAction="#findTheShortestPath" text="Find the shortest path" />
+      <Canvas fx:id="weightScale" height="27.0" layoutX="431.0" layoutY="613.0" width="200.0" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Label layoutX="323.0" layoutY="618.0" text="Weight scale:" />
+      <Text fx:id="WSmin" layoutX="400.0" layoutY="631.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" />
+      <Text fx:id="WSmax" layoutX="638.0" layoutY="630.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" />
+      <ScrollPane layoutX="755.0" layoutY="1.0" prefHeight="613.0" prefWidth="179.0">
+         <content>
+            <ListView fx:id="pathsList" prefHeight="611.0" prefWidth="177.0" />
+         </content>
+      </ScrollPane>
+      <Button layoutX="999.0" layoutY="642.0" mnemonicParsing="false" text="Use DFS algorithm" onAction="#useDFS" />
+      <Button layoutX="1000.0" layoutY="687.0" mnemonicParsing="false" text="Use BFS algorithm" onAction="#useBFS" />
+   </children>
+</Pane>
