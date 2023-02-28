@@ -13,3 +13,4 @@ a) type start and end vertex in the adequate field and press the button
 b) select two vertexes on the user interface by clicking on the middle of the each vertex  
 Selected path should appear on the panel on the right side. We can find a few different paths from different vertexes and change the current path by clicking "Select This Path" button on the panel on the right side. We can also delete any path and check the details about the path.  
 
+This application was written in Java language with JavaFX framework. To ensure compatibility I used a Maven tool, so to run this program it is needed to run "pom.xml" file.
