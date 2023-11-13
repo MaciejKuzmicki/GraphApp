@@ -14,3 +14,29 @@ b) select two vertexes on the user interface by clicking on the middle of the ea
 Selected path should appear on the panel on the right side. We can find a few different paths from different vertexes and change the current path by clicking "Select This Path" button on the panel on the right side. We can also delete any path and check the details about the path.  
 
 This application was written in Java language with JavaFX framework. To ensure compatibility I used a Maven tool, so to run this program it is needed to run "pom.xml" file.
+
+# Example File
+Example graph represantation:
+
+<code>3 3 
+      3 :2.703584  
+      2 :3.928401  
+      5 :2.630794  
+      4 :3.870133  
+      5 :2.413192  1 :3.320798  7 :3.015100  
+      4 :3.368948  8 :3.437988  
+      7 :2.609469  3 :2.335345  
+      6 :2.728454  8 :2.369440 
+</code> 
+<p>It means that the graph has 3 rows and 3 columns. Each line represents the neighbours of the current vertex (vertexes are listed one by one starting from the 0, ending at the last one). Here, vertex number 0 has exactly one neighbour which is vertex number 3 and
+the cost of the route from vertex 0 to vertex 3 is 2.703584</p>
+
+# Screenshots
+<ul>
+  <li>Connected Graph</li>
+  <br />
+    <img src="Images/ConnectedGraph.png" alt="Library Image" style="max-width: 100%; height: auto;">
+  <li>Not Connected Graph With Dijkstra Usage</li>
+  <br />
+    <img src="Images/NotConnectedGraphWithDijkstra.png" alt="Library Image" style="max-width: 100%; height: auto;">
+</ul>
